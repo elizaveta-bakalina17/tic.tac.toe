@@ -61,3 +61,16 @@ def start_game():
         print('Игра окончена. Ничья!')
     elif check_win() != False:
         print('Выиграл ' + check_win())
+
+
+def restart_game():
+    while True:
+        start_game()
+        restart = input("Хотите сыграть еще раз? (Да или нет): ").strip().lower()
+        if restart != "да":
+            print("Спасибо за игру. Обращайтесь еще)")
+            break
+
+
+print('Добро пожаловать в Крестики-нолики:)')
+restart_game()
